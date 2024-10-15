@@ -11,9 +11,10 @@ a{
     font-size: 18px;
     color: rgb(5,56,77);
     text-decoration: none;
-    font-weight: bolder;
+    font-weight: bold;
 }
 a:hover{
-    color: rgb(1, 119, 27);
+    color: rgb(0, 83, 18);
     font-size: 19px;
+    font-weight: bolder;
 }

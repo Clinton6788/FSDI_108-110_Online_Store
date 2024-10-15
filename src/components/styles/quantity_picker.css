@@ -1,0 +1,18 @@
+.qtyPicker{
+    margin: 0 auto;
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.qtyPicker label{
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px;
+    
+}
+.qtyPicker button{
+    background-color: lightgray;
+}

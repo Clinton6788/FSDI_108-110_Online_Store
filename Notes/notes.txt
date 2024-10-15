@@ -1,0 +1,10 @@
+run react with cmd 'npm start'
+
+Must close Tags! 
+    <Open> </Close>
+    <Open and Close />
+
+CSS:
+Apply first to class, then tags:
+    .product h3{}
+    - This avoids css leakage
