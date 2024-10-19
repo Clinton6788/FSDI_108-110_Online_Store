@@ -1,5 +1,9 @@
 .catalog{
     min-height: calc(100vh - 100px);
     
-    background-color: lightgray;
+    background-color: rgb(85, 85, 85);
+}
+.filters button{
+    margin-left: 10px;
+    margin-top: 10px;
 }
