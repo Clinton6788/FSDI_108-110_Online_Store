@@ -18,12 +18,19 @@
 .productPriceArea{
     display: flex;
     flex-direction: row;
-    flex: 3;
+    justify-content: space-between;
+    align-items: center;
 }
-.productTotal{
+.product .productTotal{
     display: flex;
     flex-direction: column;
 }
-.productFlexNum{
-    flex: 2;
+.product .flexWidth{
+    width: 33%;
+}
+.product .btnFlex{
+    text-align: end;
+}
+.product .productTotal label{
+    margin: 5px 0;
 }

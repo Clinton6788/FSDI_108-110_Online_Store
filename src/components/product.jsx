@@ -26,13 +26,18 @@ function Product(props){
             <h3>{props.data.title}</h3>
             <span>{props.key}</span>
             <Quantity_Picker onChange={handleQuantity}></Quantity_Picker>
+
             <div className='productPriceArea'>
-                <div className='productTotal productFlexNum'>
+                <div className='flexWidth'></div>
+                <div className='productTotal flexWidth'>
                     <label>Each: {props.data.price.toFixed(2)}</label>
                     <label>Total: {getTotal()} </label>
                 </div>
-                <button className='btn btn-sm btn-success btnFlex' onClick={addToCart}>Add</button>
+                <div className='flexWidth btnFlex'>
+                    <button className='btn btn-sm btn-success' onClick={addToCart}>Add</button>
+                </div>
             </div>
+
         </div>
     );
 }

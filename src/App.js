@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import About from './pages/about';
 
+
 function App() {
   return (
     <div className='App'>
@@ -16,5 +17,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
