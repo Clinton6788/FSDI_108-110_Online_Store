@@ -1,9 +1,9 @@
 import './styles/catalog.css';
 import Product from '../components/product';
 import DataService from '../services/dataService';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-function Catalog(){
+function Catalog(){ 
 
     const[products, setProducts] = useState([]);
     const[categories, setCategories] = useState([]);

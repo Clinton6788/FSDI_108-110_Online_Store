@@ -1,0 +1,21 @@
+.employeeOTM{
+    width: 390px;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 10px 20px;
+    color: rgb(160, 253, 156);
+
+}
+/* 
+ * 
+ * Create the Cart page
+ * 
+ * route on /cart
+ * 
+ * update navbar, remove the search button
+ * and place a Link to catalog  
+ * make it look like a button
+ *
+ */ 

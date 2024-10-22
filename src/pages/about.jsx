@@ -9,7 +9,7 @@ function toggleEmail(){
 }
 
     return(
-        <div className='about'>
+        <div className='about page'>
             <h3>About Us</h3>
 
             <div className=''>

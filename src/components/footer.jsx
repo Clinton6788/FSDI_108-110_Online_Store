@@ -2,7 +2,7 @@ import './styles/footer.css';
 
 function Footer(){
     return(
-        <div className='footerMain'>
+        <div className='bg-dark footerMain'>
             <footer>
                 <h2>Created by Clinton</h2>
             </footer>
