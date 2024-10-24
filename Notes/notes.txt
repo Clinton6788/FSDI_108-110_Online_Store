@@ -8,3 +8,9 @@ CSS:
 Apply first to class, then tags:
     .product h3{}
     - This avoids css leakage
+
+
+How to modify a useState var:
+    Create a copy
+    Modify the copy
+    Set the copy

@@ -1,0 +1,25 @@
+.admin{
+    background-color: rgb(151, 151, 151);
+}
+
+.admin .productEntry{
+    margin-top: 40px;
+    width: 400px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgb(58, 58, 58);
+}
+.admin .couponEntry{
+    margin-top: 40px;
+    width: 400px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgb(58, 58, 58);
+}
+
+.admin .formFlex{
+    display: flex;
+    justify-content: space-evenly;
+}

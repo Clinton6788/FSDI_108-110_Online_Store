@@ -7,6 +7,8 @@ function Catalog(){
 
     const[products, setProducts] = useState([]);
     const[categories, setCategories] = useState([]);
+    const[filter,setFilter] = useState("")
+
 
     useEffect(function(){
         loadCatalog();
@@ -24,15 +26,25 @@ function Catalog(){
         let cats = service.getCategories();
         setCategories(cats)
     }
+
+    function applyFilter(category){
+        setFilter(category);
+    } 
+
+    function clearFilter(){
+        setFilter("")
+    }
+
     return(
-        <div className='catalog'>
+        <div className='catalog page'>
             <h3>We have {products.length} new products for you!</h3>
             <div className='filters'>
-                {categories.map(c => <button className='btn btn-sm btn-outline-success'>{c}</button>)}
+                <button className='btn btn-sm btn-success' onClick={clearFilter}>All</button>
+                {categories.map(c => <button onClick={() => applyFilter(c)} className='btn btn-sm btn-success'>{c}</button>)}
             </div>
             <br/>
             {
-                products.map((item)=>(
+                products.filter(prod => prod.category === filter || !filter).map((item)=>(
                     <Product key={item.id} data={item} />
                 ))
             }

@@ -4,7 +4,7 @@ const catalog = [
         "title":"Tomato",
         "img":"https://tse1.mm.bing.net/th?id=OIP.OW2lHVK5xhLOstqjjY3DPgHaHa&pid=Api&P=0&h=220",
         "price":4.99,
-        "category": "Dairy",
+        "category": "Vegetable",
         "id": "tomato_1"
     },
     {
@@ -22,7 +22,7 @@ const catalog = [
         "id": "apple_1"
     },
     {
-        "title":"pepper",
+        "title":"Pepper",
         "img":"./img/pepper.jpg",
         "price":8.99,
         "category": "Vegetables",
@@ -53,7 +53,7 @@ const catalog = [
         "title":"Mushrooms",
         "img":"./img/mushrooms.jpg",
         "price":6.99,
-        "category": "Dairy",
+        "category": "Vegetable",
         "id": "milk_1"
     },
     {
