@@ -9,29 +9,29 @@ import Cart from './pages/cart';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import GlobalProvider from './state/globalProvider';
 
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className='App'>
-        <Navbar />
-
-        <div className='page'>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/home' element={<Home />} />
-            <Route path='/catalog' element={<Catalog />} />
-            <Route path='/about' element={<About />}/>
-            <Route path='/admin' element={<Admin />}/>
-            <Route path='/cart' element={<Cart />}/>
-          </Routes>
+    <GlobalProvider>
+      <BrowserRouter>
+        <div className='App'>
+          <Navbar />
+          <div className='page'>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/home' element={<Home />} />
+              <Route path='/catalog' element={<Catalog />} />
+              <Route path='/about' element={<About />}/>
+              <Route path='/admin' element={<Admin />}/>
+              <Route path='/cart' element={<Cart />}/>
+            </Routes>
+          </div>
+          <Footer />
         </div>
-        
-        
-        <Footer />
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </GlobalProvider>
   );
 }
 

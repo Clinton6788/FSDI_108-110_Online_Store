@@ -12,5 +12,11 @@ Apply first to class, then tags:
 
 How to modify a useState var:
     Create a copy
+        copy = {...original}
     Modify the copy
+        if x, copy.val = y
     Set the copy
+        setOriginal(copy)
+
+onChange: updated everytime
+onBlur: updated when user leaves form field

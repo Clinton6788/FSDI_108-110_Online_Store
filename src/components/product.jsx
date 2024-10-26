@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Quantity_Picker from './quantity_picker';
+import QuantityPicker from './quantity_picker';
 import './styles/product.css'
 
 
@@ -25,7 +25,7 @@ function Product(props){
             <img src = {props.data.img} alt=""/>
             <h3>{props.data.title}</h3>
             <span>{props.key}</span>
-            <Quantity_Picker onChange={handleQuantity}></Quantity_Picker>
+            <QuantityPicker onChange={handleQuantity}></QuantityPicker>
 
             <div className='productPriceArea'>
                 <div className='flexWidth'></div>

@@ -8,24 +8,46 @@ function Admin(){
         discount: ''
     });
         
+    const [product, setProduct] = useState({
+        title: '',
+        price: '',
+        imageUrl: '',
+        category: ''
+    });
 
     function handleCoupon(e){
         const val = e.target.value;
         const name = e.target.name;
 
         console.log("Val Changed",val, name);
-        if(name === "code"){
-            // setCoupon({code: val, discount: coupon.discount})
-        }
-
+        let copy = {...coupon};
+        copy[name] = val;
+        setCoupon(copy);
     }
+    /**
+     * create a copy
+     * modify the copy
+     * 'set' the copy back
+     */
 
     function handleProduct(e){
         const val = e.target.value;
         const name = e.target.name;
         console.log(val,name);
-        
+        let copy = {...product}
+        copy[name] = val;
+        setProduct(copy)
     }
+
+    function saveProduct(){
+        console.log(product)
+    }
+    function saveCoupon(){
+        console.log(coupon);
+    }
+
+    
+
 
     return(
         <div className='admin page'>
@@ -59,7 +81,7 @@ function Admin(){
                             <input
                                 type="text"
                                 className="form-control"
-                                name="image"
+                                name="imageUrl"
                                 placeholder="Enter image URL"
                                 onChange={handleProduct}
                             />
@@ -74,7 +96,9 @@ function Admin(){
                                 onChange={handleProduct}
                             />
                         </div>
-                        <button type="submit" className="btn btn-primary">Save</button>
+                        <div>
+                            <button type='button' onClick={saveProduct} className="btn btn-primary">Save</button>
+                        </div>
                     </form>
                 </div>
                 <div className='couponEntry'>
@@ -100,7 +124,7 @@ function Admin(){
                                 onChange={handleCoupon}
                             />
                         </div>
-                        <button type="submit" className="btn btn-primary">Save</button>
+                        <button type="button" className="btn btn-primary" onClick={saveCoupon} >Save</button>
                     </form>
                 </div>
             </div>
