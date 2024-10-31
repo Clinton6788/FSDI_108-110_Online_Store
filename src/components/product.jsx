@@ -26,18 +26,21 @@ function Product(props){
     return(
         <div className='product'>
             <img src = {props.data.img} alt=""/>
-            <h3>{props.data.title}</h3>
-            <span>{props.key}</span>
-            <div className='productTotal'>
-                <label>Each: ${props.data.price.toFixed(2)}</label>
-                <label>Total:<strong> ${getTotal()}</strong> </label>
+            <div className='infoSect'>
+                <div className='prodTitle'>
+                    <h4>{props.data.title} - ${props.data.price.toFixed(2)}</h4>
+                </div>
+                <span>{props.key}</span>
+                <div className='qtyPick'>
+                    <QuantityPicker onChange={handleQuantity}></QuantityPicker>
+                </div>
+                <div className='btnFlex'>
+                    <div className='total'>
+                        <label>${getTotal()}</label>
+                    </div>
+                    <button className='btn btn-sm btn-success addBtn' onClick={add}>Add to Cart</button>
+                </div>
             </div>
-            <div className='btnFlex'>
-                <QuantityPicker onChange={handleQuantity}></QuantityPicker>
-                <button className='btn btn-sm btn-success' onClick={add}>Add</button>
-            </div>
-
-
         </div>
     );
 }

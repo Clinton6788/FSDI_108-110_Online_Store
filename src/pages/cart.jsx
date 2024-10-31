@@ -44,14 +44,15 @@ function Cart(){
                                 <span>{prod.price}</span>
                                 <span>{prod.qty}</span>
                                 <span>{(prod.qty * prod.price).toFixed(2)}</span>
-                                <span><button className="btn btn-sm btn-dark">Delete</button></span>
+                                <span><button className="btn btn-sm btn-danger">Remove</button></span>
                             </div>
                         ))}
                     </div>
                 </div>
                 <div className="sidebar">
                     <h4>Total</h4>
-                    <h2>{getTotal()}</h2>
+                    <h2>${getTotal()}</h2>
+                    <button className="btn btn-success">Checkout</button>
                 </div>
             </div>
         </div>

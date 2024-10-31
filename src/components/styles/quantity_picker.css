@@ -1,15 +1,28 @@
 .qtyPicker{
     display: flex;
     align-items: center;
+    width: 90px;
+    height: 40px;
+    justify-content: center;
+
 }
 
 .qtyPicker label{
-    margin: 0 5px;
+    margin: 0 20px;
     font-weight: bold;
     font-size: 18px;
     padding: 5px;
-    
+    border: 1px solid black;
+    background-color: rgba(29, 29, 29, 0.7);
+    border-radius: 5px;
+    height: 35px;
+    min-width: 30px;
 }
 .qtyPicker button{
     background-color: lightgray;
+}
+.qtyPicker .centerText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

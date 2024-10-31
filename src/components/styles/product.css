@@ -1,19 +1,22 @@
 .product{
-    border: 1px solid #333;
+    border: 3px solid #333;
     border-radius: 4px;
     margin: 12px;
-    padding: 10px;
-    background-color: lightgray;
+    background-color: rgb(77, 77, 77);
     display: inline-block;
     width: 250px;
     vertical-align: top;
     align-content: end;
     border-radius: 20px;
 }
+.product h4{
+    color: blanchedalmond;
+}
 .product img{
     max-width: 200px;
     height: 200px;
     margin: 10px;
+    border-radius: 50%;
 }
 .productPriceArea{
     display: flex;
@@ -21,17 +24,48 @@
     justify-content: space-between;
     align-items: center;
 }
-.product .productTotal{
+.product .btnFlex{
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 60px;
+    color: blanchedalmond;
+    align-items: center;
 }
-.product .productTotal label{
-    margin: 5px 0;
+.product .total{
+    padding: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    color: blanchedalmond;
+    height: 40px;
+    width: 90px;
+    border-radius: 10px;
+    align-content: center;
+    border: 3px solid rgb(39, 190, 39);
+    /* background-color: rgb(173, 173, 173); */
 }
-.product .btnFlex{
-    margin: 10px 0;
+.product .addBtn{
+    height: 35px;
+}
+.product .qtyPick{
+    margin: 10px auto;
+    text-align: center;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    color: blanchedalmond;
+}
+.product .prodTitle{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product .infoSect{
+    background-color: rgba(22, 22, 22, 0.61);
+
 }
