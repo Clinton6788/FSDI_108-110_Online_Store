@@ -4,12 +4,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { useContext } from 'react';
 import DataContext from '../state/dataContext';
+import Product from './product';
 
 
 function Navbar(){
 
     const user = useContext(DataContext).user;
     const cart = useContext(DataContext).cart;
+
+    function countProducts(){
+        let totQty = 0
+        for (let i = 0; i < cart.length; i++) {
+            const prod = cart[i]
+            totQty += prod.qty
+        }
+        return totQty
+    }
+
+
+
+
     return(
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
@@ -39,7 +53,7 @@ function Navbar(){
                         <Link to="/cart" className='cartLink' >
                             <FontAwesomeIcon icon={faShoppingCart} style={{color: 'white', margin: '5px 10px', height: '25px'}}/>
                                 <span class="translate-middle badge rounded-pill bg-danger cartQty">
-                                {cart.length}
+                                {countProducts()}
                                 </span>
                         </Link>
                     </div>

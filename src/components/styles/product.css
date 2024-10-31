@@ -23,14 +23,15 @@
 }
 .product .productTotal{
     display: flex;
-    flex-direction: column;
-}
-.product .flexWidth{
-    width: 33%;
-}
-.product .btnFlex{
-    text-align: end;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 .product .productTotal label{
     margin: 5px 0;
+}
+.product .btnFlex{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

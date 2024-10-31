@@ -1,17 +1,34 @@
 import "./styles/cart.css"
-import DataContext from '../state/dataContext';
+import DataContext from '../state/dataContext'; 
 import { useContext } from 'react';
 
 function Cart(){
 
     const cart = useContext(DataContext).cart;
+    function getTotal(){
+        let total = 0;
+        for (let i = 0; i< cart.length; i++) {
+            const prod = cart[i];
+            total += (prod.price * prod.qty)
+        }
+        return total.toFixed(2);
+    }
+    function countProducts(){
+        let totQty = 0
+        for (let i = 0; i < cart.length; i++) {
+            const prod = cart[i]
+            totQty += prod.qty
+        }
+        return totQty
+    }
 
     return (
         <div className="cart page">
-            <h3>Are you ready to checkout with {cart.length} items?</h3>
+            <h3>Are you ready to checkout with {countProducts()} item(s)?</h3>
             <div className="cartMainFlex">
                 <div className="cartArea"> 
                     <div className="cartHeaders">
+                        <span></span>
                         <span>Product</span>
                         <span>Price</span>
                         <span>Quantity</span>
@@ -22,6 +39,7 @@ function Cart(){
                     <div className="cartContent">
                         {cart.map((prod, index) => (
                             <div className="cartProduct" key={index}>
+                                <img className="cartImg" src={prod.img}></img>
                                 <span>{prod.title}</span>
                                 <span>{prod.price}</span>
                                 <span>{prod.qty}</span>
@@ -33,7 +51,7 @@ function Cart(){
                 </div>
                 <div className="sidebar">
                     <h4>Total</h4>
-                    <h2>$156.99</h2>
+                    <h2>{getTotal()}</h2>
                 </div>
             </div>
         </div>
