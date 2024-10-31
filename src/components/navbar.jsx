@@ -9,6 +9,7 @@ import DataContext from '../state/dataContext';
 function Navbar(){
 
     const user = useContext(DataContext).user;
+    const cart = useContext(DataContext).cart;
     return(
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
@@ -35,8 +36,11 @@ function Navbar(){
                         <div className='btn btn-outline-light me-3'>
                             {user.name}
                         </div>
-                        <Link to="/cart">
+                        <Link to="/cart" className='cartLink' >
                             <FontAwesomeIcon icon={faShoppingCart} style={{color: 'white', margin: '5px 10px', height: '25px'}}/>
+                                <span class="translate-middle badge rounded-pill bg-danger cartQty">
+                                {cart.length}
+                                </span>
                         </Link>
                     </div>
                 </div>

@@ -2,16 +2,11 @@
     background-color: rgb(85, 85, 85);
     background-image: url("/public/img/home_background.jpg");
     padding: 0 5%;
-}
-
-.home .homeFlex{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     align-content: center;
 }
+
 .home .centerpiece{
+    margin: 0 auto;
     height: 300px;
     width: 700px;
     padding: 20px;

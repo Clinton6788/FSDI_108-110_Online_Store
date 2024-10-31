@@ -5,6 +5,14 @@
     height: 60px;
     align-items: center;
 }
+.mnavbarenu .cartLink{
+    position: relative;
+}
+.navbar .cartQty{
+    position: absolute;
+    top: 15px;
+    right: -7px;
+}
 
 /* a{
     text-transform: uppercase;

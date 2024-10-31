@@ -1,14 +1,17 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import QuantityPicker from './quantity_picker';
 import './styles/product.css'
+import DataContext from '../state/dataContext';
 
 
 function Product(props){
     const [totQty, setTotQty] = useState(1);
+    let addToCart = useContext(DataContext).addToCart;
 
-    function addToCart(){
-        console.log('Adding to cart');
-        
+    function add(){
+        // Creating an obj (prod info + qty) to add to cart
+        let prodForCart = {...props.data, qty:totQty};
+        addToCart(prodForCart)
     }
 
     function handleQuantity(qty){
@@ -17,8 +20,8 @@ function Product(props){
     }
 
     function getTotal(){
-        let total = (props.data.price * totQty).toFixed(2);
-        return total;
+        let total = (props.data.price * totQty);
+        return total.toFixed(2);
     }
     return(
         <div className='product'>
@@ -34,7 +37,7 @@ function Product(props){
                     <label>Total: {getTotal()} </label>
                 </div>
                 <div className='flexWidth btnFlex'>
-                    <button className='btn btn-sm btn-success' onClick={addToCart}>Add</button>
+                    <button className='btn btn-sm btn-success' onClick={add}>Add</button>
                 </div>
             </div>
 
