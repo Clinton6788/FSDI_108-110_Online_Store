@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './styles/admin.css';
+import DataService from '../services/dataService';
 // import { useState, useEffect } from 'react';
 
 function Admin(){ 
@@ -40,8 +41,13 @@ function Admin(){
     }
 
     function saveProduct(){
-        console.log(product)
+        let service = new DataService();
+        // Changing price to an int
+        let fixedProduct = {...product};
+        fixedProduct.price = parseFloat(fixedProduct.price)
+        service.saveProduct(fixedProduct)
     }
+    
     function saveCoupon(){
         console.log(coupon);
     }
